@@ -9,8 +9,3 @@ Proyek Flutter baru yang berisi daftar gunung-gunung di Indonesia. Proyek ini di
 ## Teknologi
 - Flutter
 - Dart
-
-## Lisensi
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
-
-```
