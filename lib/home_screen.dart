@@ -5,7 +5,7 @@ import 'about_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,6 +98,7 @@ class HomescreenList extends StatelessWidget {
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'RobotoMono',
                             ),
                           ),
                           const SizedBox(height: 8),

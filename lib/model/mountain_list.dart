@@ -27,7 +27,10 @@ var mountainList = [
     status: 'Aktif',
     gambar: 'assets/images/gunung_rinjani.jpeg',
     gambarCarousel: [
-      // url image
+      'https://lh5.googleusercontent.com/proxy/A2RdkoCMsChOYd3bd1m0qCGX_1sAtbZtPUE71_GlHHCSKDMCstFcq5hXvAV_CdBNNt2MP_ZEGJAb-9-tpR5LwsqDGvENdYG6zE4527YNvt7xgtKxjR2L68EVetzIJfQSQ_egXYV3RMw',
+      'https://kwriu.kemdikbud.go.id/wp-content/uploads/2017/04/Rinjani-742x440.jpg',
+      'https://cdn0-production-images-kly.akamaized.net/kUkt-n7oadIqoWsG1wscVk4J_OQ=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1347333/original/000745400_1474018493-_trekkingrinjani_com_.jpg',
+      'https://jasling.menlhk.go.id/storage/app/media/Artikel/Rinjani_rezise.jpg',
     ],
   ),
   MountainList(
@@ -38,7 +41,9 @@ var mountainList = [
     status: 'Aktif',
     gambar: 'assets/images/gunung_semeru.jpeg',
     gambarCarousel: [
-      // url image
+      'https://kilasjatim.com/wp-content/uploads/2024/08/gunung-semeru-2_43.jpeg',
+      'https://pict.sindonews.net/dyn/850/pena/news/2023/09/05/704/1193581/6-fakta-gunung-semeru-puncak-tertinggi-di-jawa-yang-jadi-tempat-kematian-soe-hok-gie-qzw.jpg',
+      'https://www.rukita.co/stories/wp-content/uploads/2022/12/fajruddin-mudzakkir-5tAGrREDQbs-unsplash-scaled.jpg',
     ],
   ),
   MountainList(
@@ -49,7 +54,9 @@ var mountainList = [
     status: 'Aktif',
     gambar: 'assets/images/gunung_kerinci.jpeg',
     gambarCarousel: [
-      // url image
+      'https://image.popmama.com/content-images/post/20210827/2jpg-33865b703c8b3044721bd03e6c716b17.jpg?width=1200&height=800',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Gunung_Kerinci_dari_Muaralabuh.jpg/220px-Gunung_Kerinci_dari_Muaralabuh.jpg',
+      'https://superlive.id/storage/superadventure/2020/10/18/23593a121c3f.jpg',
     ],
   ),
   MountainList(
@@ -60,7 +67,9 @@ var mountainList = [
     status: 'Tidak Aktif',
     gambar: 'assets/images/gunung_merbabu.jpeg',
     gambarCarousel: [
-      // url image
+      'https://ik.imagekit.io/tvlk/blog/2021/02/Merbabu-shutterstock_1261521160.jpg?tr=dpr-2,w-675',
+      'https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2023/09/03/taman-nasionaljpg-20230903030356.jpg',
+      'https://cdn0-production-images-kly.akamaized.net/worPdc28pW5_6jd8pKHmLUgktOk=/0x164:1920x1246/800x450/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3429723/original/033954800_1618478748-merapi-2614344_1920.jpg',
     ],
   ),
   MountainList(
@@ -71,7 +80,9 @@ var mountainList = [
     status: 'Aktif',
     gambar: 'assets/images/gunung_bromo.jpeg',
     gambarCarousel: [
-      // url image
+      'https://www.wartakini.co/wp-content/uploads/2023/09/img_1516.jpg',
+      'https://torch.id/cdn/shop/articles/Artikel_167_-_Preview.webp?v=1713337145&width=1100',
+      'https://cdn.medcom.id/dynamic/content/2023/08/28/1607253/EWnBdc3ezD.JPG?w=700',
     ],
   ),
   MountainList(
@@ -82,7 +93,9 @@ var mountainList = [
     status: 'Tidak Aktif',
     gambar: 'assets/images/gunung_gede.jpeg',
     gambarCarousel: [
-      // url image
+      'https://img.inews.co.id/media/1200/files/inews_new/2023/05/05/fakta_gunung_gede_pangrango.jpg',
+      'https://jurnalpost.com/wp-content/uploads/2024/03/Gunung-Gede.webp',
+      'https://getlost.id/wp-content/uploads/2020/10/gede-pangrango_633111986.jpg',
     ],
   ),
   MountainList(
@@ -93,7 +106,9 @@ var mountainList = [
     status: 'Tidak Aktif',
     gambar: 'assets/images/gunung_lawu.jpeg',
     gambarCarousel: [
-      // url image
+      'https://upload.wikimedia.org/wikipedia/commons/b/b8/Lawu.jpg',
+      'https://asset.kompas.com/crops/rHLpT-ZBsHwk45EDCEVaar2INOU=/69x85:693x501/750x500/data/photo/2019/06/21/3507694318.jpg',
+      'https://asset-a.grid.id/crop/0x0:0x0/x/photo/2023/03/05/gunung-lawujpeg-20230305094452.jpeg',
     ],
   ),
   MountainList(
@@ -104,7 +119,9 @@ var mountainList = [
     status: 'Tidak Aktif',
     gambar: 'assets/images/gunung_sumbing.jpeg',
     gambarCarousel: [
-      // url image
+      'https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-gunung-sumbing-8c5f744ebd837229e43e2e34f896a1b6.jpg',
+      'https://www.beritamagelang.id/uploads/2020/06/5ee04b6d2b91d_1591757677.jpg',
+      'https://i0.wp.com/eltranstravel.com/wp-content/uploads/2023/01/gunung-sumbing.jpg'
     ],
   ),
   MountainList(
@@ -115,7 +132,9 @@ var mountainList = [
     status: 'Aktif',
     gambar: 'assets/images/gunung_slamet.jpeg',
     gambarCarousel: [
-      // url image
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Mount_Slamet.jpg/640px-Mount_Slamet.jpg',
+      'https://eventdaerah.kemenparekraf.go.id/storage/app/uploads/public/669/0cd/153/6690cd153a162349133709.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqyKJat1Uq68rI5EqIcUgsqCEPsz3pZmH0OA&s',
     ],
   ),
   MountainList(
@@ -126,7 +145,9 @@ var mountainList = [
     status: 'Tidak Aktif',
     gambar: 'assets/images/gunung_ciremai.jpeg',
     gambarCarousel: [
-      // url image
+      'https://upload.wikimedia.org/wikipedia/commons/e/eb/Gunung_Ciremai_sfw2503.jpg',
+      'https://kuninganmass.com/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-07-at-14.07.08.jpg',
+      'https://asset.kompas.com/crops/jKNb5ssyILxeEMGHqX16X3y9Fmg=/0x12:944x642/750x500/data/photo/2023/01/23/63ce5b9b26599.jpg',
     ],
   ),
   MountainList(
@@ -137,7 +158,9 @@ var mountainList = [
     status: 'Tidak Aktif',
     gambar: 'assets/images/gunung_argopuro.jpeg',
     gambarCarousel: [
-      // url image
+      'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2023/07/17/Gunung-Argopuro-2421901847.jpg',
+      'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/741/2024/02/24/nafa-1-3720593056.jpg',
+      'https://cdn0-production-images-kly.akamaized.net/MHyk8EAQNXN4rT8na-H7b18N6Z4=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4660964/original/024680400_1700777300-Gunung_Argopuro.jpg',
     ],
   ),
 ];

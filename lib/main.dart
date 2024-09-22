@@ -10,10 +10,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "Gunung Indonesia",
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: ThemeData(fontFamily: 'Quicksand'),
+      home: const HomeScreen(),
     );
   }
 }
