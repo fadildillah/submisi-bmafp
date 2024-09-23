@@ -68,7 +68,9 @@ class HomescreenList extends StatelessWidget {
               }));
             },
             child: Card(
-              color: const Color.fromARGB(1, 218, 211, 190),
+              color: Colors.grey[300],
+              shadowColor: const Color.fromRGBO(0, 0, 0, 0.5),
+              
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -156,9 +158,11 @@ class HomescreenGrid extends StatelessWidget {
               }));
             },
             child: Card(
-              color: const Color.fromARGB(1, 218, 211, 190),
+              color: Colors.grey[300],
+              shadowColor: const Color.fromRGBO(0, 0, 0, 1),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Expanded(
                     flex: 2,
@@ -184,7 +188,7 @@ class HomescreenGrid extends StatelessWidget {
                           Text(
                             mountain.nama,
                             style: const TextStyle(
-                              fontSize: 18,
+                              fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -202,6 +206,7 @@ class HomescreenGrid extends StatelessWidget {
                               const Icon(
                                 Icons.location_on,
                                 size: 12,
+                                color: Colors.red,
                               ),
                               Text(
                                 mountain.lokasi,

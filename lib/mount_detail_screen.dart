@@ -24,6 +24,51 @@ class MountDetailScreen extends StatelessWidget {
   }
 }
 
+class FavoriteButton extends StatefulWidget {
+  const FavoriteButton({super.key});
+
+  @override
+  State<FavoriteButton> createState() => _FavoriteButtonState();
+}
+
+class _FavoriteButtonState extends State<FavoriteButton> {
+  bool isFavorite = false;
+  static const snackBarAdded = SnackBar(
+    content: Text('Added to Favorite'),
+    duration: Duration(seconds: 3),
+    backgroundColor: Colors.green,
+    showCloseIcon: true,
+    closeIconColor: Colors.white,
+  );
+  static const snackBarRemove = SnackBar(
+    content: Text('Remove from Favorite'),
+    duration: Duration(seconds: 3),
+    backgroundColor: Colors.red,
+    showCloseIcon: true,
+    closeIconColor: Colors.white,
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        setState(() {
+          isFavorite = !isFavorite;
+        });
+        if (isFavorite == true) {
+          ScaffoldMessenger.of(context).showSnackBar(snackBarAdded);
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(snackBarRemove);
+        }
+      },
+      icon: Icon(
+        isFavorite ? Icons.favorite : Icons.favorite_border,
+        color: Colors.red,
+      ),
+    );
+  }
+}
+
 class MountDetailMobile extends StatelessWidget {
   MountDetailMobile({super.key, required this.mountain});
   final MountainList mountain;
@@ -90,7 +135,13 @@ class MountDetailMobile extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(mountain.nama, style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold, fontFamily: 'RobotoMono'),),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(mountain.nama, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'RobotoMono'),),
+                                  const FavoriteButton(),
+                                ],
+                              ),
                               const SizedBox(height: 16),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -171,74 +222,110 @@ class MountDetailDesktop extends StatelessWidget {
       children: [
         Center(
           child: SizedBox(
-            width: MediaQuery.of(context).size.width / 2,
+            width: MediaQuery.of(context).size.width * 0.8,
+            height: MediaQuery.of(context).size.height * 0.8,
             child: Container(
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: const Offset(0, 3),
-                ),
-              ]),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
               child: Row(
                 children: [
                   Expanded(
                     flex: 1,
                     child: Container(
-                      color: Colors.white,
+                      color: const Color.fromRGBO(193, 217, 202, 1),
                       child: Padding(
                         padding: const EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              child: FullScreenWidget(
-                                backgroundIsTransparent: true,
-                                disposeLevel: DisposeLevel.Low,
-                                child: Center(
-                                  child: Hero(
-                                    tag: "smallImage",
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(16),
-                                      child: Image.asset(mountain.gambar, fit: BoxFit.cover),
+                            Expanded(
+                              child: SizedBox(
+                                child: FullScreenWidget(
+                                  backgroundIsTransparent: true,
+                                  disposeLevel: DisposeLevel.Low,
+                                  child: Center(
+                                    child: Hero(
+                                      tag: "smallImage",
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Image.asset(mountain.gambar, fit: BoxFit.cover),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
                             const SizedBox(height: 16),
-                            
+                            SizedBox(
+                                height: 100,
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: mountain.gambarCarousel.map((i) {
+                                    return Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: FullScreenWidget(
+                                          disposeLevel: DisposeLevel.Low,
+                                          backgroundIsTransparent: true,
+                                          child: Center(
+                                            child: Image.network(
+                                              i,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  }).toList(),
+                                ),
+                              ),
                           ],
                         ),
                       ),
                     ),
                   ),
                   Expanded(
-                    flex: 2,
+                    flex: 1,
                     child: Container(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(mountain.nama, style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold, fontFamily: 'RobotoMono'),),
-                            const SizedBox(height: 16),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const Icon(Icons.location_on, size: 24, color: Colors.red,),
-                                Text(mountain.lokasi, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                              ],
-                            ),
-                            const SizedBox(height: 16),
-                            Text(mountain.deskripsi, style: const TextStyle(fontSize: 14),),
-                          ],
+                      alignment: Alignment.topCenter,
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
+                      color: const Color.fromRGBO(193, 217, 202, 1),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(mountain.nama, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'RobotoMono'),),
+                                  const FavoriteButton(),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const Icon(Icons.location_on, size: 24, color: Colors.red,),
+                                  Text(mountain.lokasi, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                              Text(mountain.deskripsi, style: const TextStyle(fontSize: 14),),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),
